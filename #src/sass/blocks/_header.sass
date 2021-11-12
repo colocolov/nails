@@ -5,6 +5,7 @@
   font-family: "OpenSans"
   background-color: $green_light
   &::after
+    // это накладка для фона
     content: ''
     position: absolute
     background-color: rgba(0, 0, 0, 0.1)
@@ -13,16 +14,18 @@
     top: 0
     left: 0
     right: 0
+    z-index: -1
   &--bg
     background: url(../images/bg-header.jpg)
     background-repeat: no-repeat
     background-size: cover
     background-position: center top 30%
+    z-index: 1
     // filter: blur(5px)
     // width: 100%
   &__navigation
     @include fl-all
-    background-color: $green-light
+    // background-color: rgba(238,242,233, 0.8)
   &__phone
     font-size: 14px
     line-height: 16px
@@ -45,15 +48,15 @@
     &::after
       position: absolute
       content: 'Акварельный дизайн'
-      top: 0
+      top: -5px
       left: 0
-      width: 100%
       font-family: "CormorantSC"
       font-weight: 600
       font-style: italic
       font-size: 72px
       line-height: 72px
-      color: rgba(48,48,54, 0.10)
+      letter-spacing: 0
+      color: rgba(48,48,54, 0.08)
       text-transform: uppercase
       z-index: -1
   &__text
