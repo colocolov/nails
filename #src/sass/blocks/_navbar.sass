@@ -1,0 +1,19 @@
+.nav
+  &__list
+    display: flex
+  &__item
+    &:not(:last-child)
+      margin-right: 40px
+  &__link
+    line-height: 20px
+    color: $text
+    &:after
+      content: ''
+      display: block
+      height: 2px
+      background-color: $text
+      width: 0%
+      transition: 0.5s
+    &:hover
+      &:after
+        width: 85%
