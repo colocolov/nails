@@ -24,7 +24,7 @@ let path = {
     html: source_folder + "/**/*.html",
     css: source_folder + "/sass/**/*.sass",
     js: source_folder + "/js/**/*.js",
-    images: source_folder + "/images/**/*.{jpg,png,gif,ico,webp}",
+    images: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
     svg: source_folder + "/images/icons/*.svg",
   },
   clean: "./" + project_folder + "/",
@@ -206,7 +206,7 @@ function svgSprit() {
         mode: {
           stack: {
             sprite: "../icons/sprite.svg",
-            //example: true,
+            // example: true,
           },
         },
       })

@@ -61,6 +61,36 @@ input
   font-weight: 600
   line-height: 1
   color: $bgc
+  &--nav
+    font-size: 14px
   &--header
     padding: 16px 64px
     font-size: 16px
+
+.label
+  position: relative
+  margin: 0 auto
+  margin-bottom: 50px
+  background-color: $icon
+  width: 68px
+  height: 68px
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  &::before
+    position: absolute
+    content: ''
+    top: 50%
+    left: -430px
+    width: 407px
+    height: 1px
+    background: linear-gradient(90deg, rgba(152,138,117,0) 0%, rgba(152,138,117,1) 100%)
+  &::after
+    position: absolute
+    content: ''
+    top: 50%
+    left: 91px
+    width: 407px
+    height: 1px
+    background: linear-gradient(90deg, rgba(152,138,117,1) 0%, rgba(197,207,196,0) 100%)
