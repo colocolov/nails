@@ -1,13 +1,62 @@
 .header
-  background-color: $green_light
+  position: relative
   padding-top: 26px
   padding-bottom: 26px
   font-family: "OpenSans"
+  background-color: $green_light
+  &::after
+    content: ''
+    position: absolute
+    background-color: rgba(0, 0, 0, 0.1)
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    right: 0
+  &--bg
+    background: url(../images/bg-header.jpg)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center top 30%
+    // filter: blur(5px)
+    // width: 100%
   &__navigation
     @include fl-all
+    background-color: $green-light
   &__phone
     font-size: 14px
     line-height: 16px
     color: $text
-
-.button--nav
+  &__content
+    margin-top: 120px
+    margin-bottom: 160px
+    padding-left: 550px
+  &__title
+    position: relative
+    font-family: inherit
+    font-weight: 600
+    font-size: 56px
+    line-height: 72px
+    letter-spacing: 0.06em
+    text-transform: uppercase
+    color: $bgc
+    margin-bottom: 25px
+    z-index: 2
+    &::after
+      position: absolute
+      content: 'Акварельный дизайн'
+      top: 0
+      left: 0
+      width: 100%
+      font-family: "CormorantSC"
+      font-weight: 600
+      font-style: italic
+      font-size: 72px
+      line-height: 72px
+      color: rgba(48,48,54, 0.10)
+      text-transform: uppercase
+      z-index: -1
+  &__text
+    font-family: "Raleway"
+    line-height: 24px
+    margin-bottom: 40px
