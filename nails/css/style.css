@@ -509,11 +509,17 @@ input {
 .course__composition {
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 170px;
 }
 
 .course__head {
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+.course__head--step {
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .course__subtitle {
@@ -562,4 +568,106 @@ input {
 .course__date--info {
   display: block;
   color: #999696;
+}
+
+.course__date--step {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.course__lessons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.course__unit {
+  width: 448px;
+  padding: 30px 35px;
+  margin: 0 16px 30px 16px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.course__name {
+  position: relative;
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: left;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.course__name::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  background: url(../images/icons/plus.svg) no-repeat center center;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.course__description {
+  line-height: 24px;
+  color: #999696;
+  text-align: left;
+}
+
+.course__steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.course__step {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 256px;
+}
+
+.course__step img {
+  width: 94px;
+  height: 94px;
+  padding: 15px;
+  margin-bottom: 28px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.course__step:not(:last-child):before {
+  content: "";
+  position: absolute;
+  top: 46px;
+  left: 199px;
+  width: 146px;
+  height: 1px;
+  background-color: #303036;
 }

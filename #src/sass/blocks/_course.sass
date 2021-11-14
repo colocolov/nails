@@ -51,9 +51,13 @@
   &__composition
     margin: 0 auto
     text-align: center
+    margin-bottom: 170px
   &__head
     text-transform: uppercase
     margin-bottom: 20px
+    &--step
+      text-align: center
+      margin-bottom: 50px
   &__subtitle
     display: block
     font-size: 18px
@@ -80,16 +84,73 @@
     &--duration
     &--info
     &--quantity
-  &__date--info
-    display: block
-    color: $text_light
-
-  &__data--time
-
+  &__date
+    &--info
+      display: block
+      color: $text_light
+    &--step
+      font-size: 22px
+      line-height: 32px
   &__lessons
-
+    display: flex
+    flex-wrap: wrap
+    padding-left: 80px
+    padding-right: 80px
   &__unit
-
+    width: 448px
+    padding: 30px 35px
+    margin: 0 16px 30px 16px
+    background-color: $bgc
+    border-radius: 20px
   &__name
-
+    position: relative
+    font-family: "OpenSans"
+    font-weight: 400
+    font-size: 28px
+    line-height: 32px
+    text-align: left
+    margin-bottom: 10px
+    cursor: pointer
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      transition: all 0.5s ease-out
+      //transform: rotate(0deg)
+      background: url(../images/icons/plus.svg) no-repeat center center
+      height: 16px
+      width: 16px
+      background-color: transparent
+      cursor: pointer
+      outline: none
   &__description
+    line-height: 24px
+    color: $text_light
+    text-align: left
+  &__howto
+
+  &__steps
+    @include fl-all
+  &__step
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 256px
+    img
+      width: 94px
+      height: 94px
+      padding: 15px
+      margin-bottom: 28px
+      background-color: $bgc
+      border-radius: 10px
+    &:not(:last-child)
+      &:before
+        content: ''
+        position: absolute
+        top: 46px
+        left: 199px
+        width: 146px
+        height: 1px
+        background-color: $text
