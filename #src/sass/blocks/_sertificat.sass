@@ -1,0 +1,52 @@
+.sertificat
+  &__container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: 100px
+    padding-bottom: 100px
+  &__info
+    width: 534px
+
+  &__head
+    margin-bottom: 43px
+
+  &__list
+
+  &__item
+    position: relative
+    padding-left: 67px
+    font-size: 22px
+    line-height: 32px
+    letter-spacing: 0.02em
+    color: $text_light
+    &:not(:last-child)
+      margin-bottom: 25px
+    &::after
+      position: absolute
+      content: ''
+      top: 0
+      left: 0
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      background: $icon url(../images/icons/sprite.svg#done) no-repeat center center
+      background-size: 80%
+  &__image
+    position: relative
+    width: 410px
+    border-radius: 25px
+    overflow: hidden
+    z-index: 3
+    // //&::after
+    // position: absolute
+    // content: ''
+    // top: 25px
+    // left: 25px
+    // width: 410px
+    // height: 100px
+    // z-index: 0
+    // border-radius: 25px
+    // overflow: hidden
+    // filter: blur(5px)
+    // background: url(../images/sertificat.jpg) no-repeat center center
