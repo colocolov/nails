@@ -63,10 +63,10 @@
               <a href="#" class="button course__button">Заказать курс</a>
             </div>
             <!-- /.course__promo -->
-            <div class="label course__label">
+            <div class="label course__label" id="course">
               <img src="images/icons/sprite.svg#lilia" alt="icon" class="course__label--icon" />
             </div>
-            <div class="course__composition" id="course">
+            <div class="course__composition">
               <h2 class="heading course__head">Состав курса</h2>
               <span class="course__subtitle">Базовый обучающий курс для Nail-мастеров</span>
               <div class="course__data">
@@ -83,28 +83,7 @@
                   <span class="course__date--info">лекций по 8-12 минут</span>
                 </div>
               </div>
-              <div class="course__lessons">
-                <div class="course__unit">
-                  <h3 class="course__name">Урок №1</h3>
-                  <p class="text course__description">Краткое описание того что входит в данный урок.</p>
-                </div>
-                <div class="course__unit">
-                  <h3 class="course__name">Урок №1</h3>
-                  <p class="text course__description">Краткое описание того что входит в данный урок.</p>
-                </div>
-                <div class="course__unit">
-                  <h3 class="course__name">Урок №1</h3>
-                  <p class="text course__description">Краткое описание того что входит в данный урок.данный урок.</p>
-                </div>
-                <div class="course__unit">
-                  <h3 class="course__name">Урок №1</h3>
-                  <p class="text course__description">Краткое описание того что входит в данный урок.</p>
-                </div>
-                <div class="course__unit">
-                  <h3 class="course__name">Урок №1</h3>
-                  <p class="text course__description">Краткое описание того что входит в данный урок.</p>
-                </div>
-              </div>
+              @include('html/_accordeon.html')
             </div>
             <div class="course__howto">
               <h2 class="heading course__head--step">КАК ПРОХОДИТ ОБУЧЕНИЕ?</h2>
@@ -143,7 +122,12 @@
       @include('html/_footer.html')
     </div>
 
-    <!-- подключение скриптов 
-    <script src="js/main.min.js"></script>-->
+    <!-- подключение скриптов -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

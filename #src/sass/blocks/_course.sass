@@ -94,40 +94,39 @@
   &__lessons
     display: flex
     flex-wrap: wrap
+    align-items: baseline
     padding-left: 80px
     padding-right: 80px
   &__unit
+    position: relative
     width: 448px
+    //height: 110px
     padding: 30px 35px
     margin: 0 16px 30px 16px
     background-color: $bgc
     border-radius: 20px
+    &::after
+      position: absolute
+      content: ''
+      bottom: 0
+      right: 0
+      left: 0
+      height: 45px
+      // background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10px, rgba(255,255,255,0) 100%)
+      pointer-events: none
   &__name
-    position: relative
     font-family: "OpenSans"
     font-weight: 400
     font-size: 28px
     line-height: 32px
     text-align: left
-    margin-bottom: 10px
-    cursor: pointer
-    &::before
-      content: ''
-      position: absolute
-      top: 0
-      right: 0
-      transition: all 0.5s ease-out
-      //transform: rotate(0deg)
-      background: url(../images/icons/plus.svg) no-repeat center center
-      height: 16px
-      width: 16px
-      background-color: transparent
-      cursor: pointer
-      outline: none
+    margin-bottom: 0
   &__description
+    margin-top: 10px
     line-height: 24px
     color: $text_light
     text-align: left
+    // display: none
   &__howto
 
   &__steps
@@ -154,3 +153,6 @@
         width: 146px
         height: 1px
         background-color: $text
+
+.active .course__name::before
+  transform: rotate(45deg)

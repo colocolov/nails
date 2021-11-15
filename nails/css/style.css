@@ -581,11 +581,15 @@ input {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   padding-left: 80px;
   padding-right: 80px;
 }
 
 .course__unit {
+  position: relative;
   width: 448px;
   padding: 30px 35px;
   margin: 0 16px 30px 16px;
@@ -593,34 +597,27 @@ input {
   border-radius: 20px;
 }
 
+.course__unit::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 45px;
+  pointer-events: none;
+}
+
 .course__name {
-  position: relative;
   font-family: "OpenSans";
   font-weight: 400;
   font-size: 28px;
   line-height: 32px;
   text-align: left;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.course__name::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  background: url(../images/icons/plus.svg) no-repeat center center;
-  height: 16px;
-  width: 16px;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
+  margin-bottom: 0;
 }
 
 .course__description {
+  margin-top: 10px;
   line-height: 24px;
   color: #999696;
   text-align: left;
@@ -670,4 +667,58 @@ input {
   width: 146px;
   height: 1px;
   background-color: #303036;
+}
+
+.active .course__name::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.accordeon {
+  overflow: hidden;
+}
+
+.accordeon__name {
+  position: relative;
+  cursor: pointer;
+}
+
+.accordeon__name::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  background: url(../images/icons/plus.svg) no-repeat center center;
+  height: 16px;
+  width: 16px;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.accordeon__content {
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.active .accordeon__content {
+  margin-top: 15px;
+  opacity: 1;
+  padding: 0 5px;
+  max-height: -webkit-max-content;
+  max-height: -moz-max-content;
+  max-height: max-content;
+  -webkit-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
