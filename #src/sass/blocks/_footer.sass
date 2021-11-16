@@ -1,0 +1,31 @@
+.footer
+  background-color: #3d362c
+  padding-top: 33px
+  padding-bottom: 15px
+  &__date
+    @include fl-all
+  &__email
+    font-weight: 500
+    font-size: 12px
+    line-height: 14px
+    text-transform: uppercase
+    color: $bgc
+  &__socials
+    display: flex
+    align-items: center
+  &__social
+    @include fl-c
+    height: 38px
+    width: 38px
+    background: $icon
+    border-radius: 10px
+    &:not(:first-child)
+      margin-left: 35px
+    & img
+      width: 24px
+  &__copyright
+    text-align: center
+    font-family: "OpenSans"
+    font-size: 13px
+    line-height: 18px
+    color: $bgc

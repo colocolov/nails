@@ -1045,4 +1045,72 @@ input {
   font-size: 16px;
   line-height: 16px;
   color: #303036;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #3d362c;
+  padding-top: 33px;
+  padding-bottom: 15px;
+}
+
+.footer__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__email {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 38px;
+  width: 38px;
+  background: #988A75;
+  border-radius: 10px;
+}
+
+.footer__social:not(:first-child) {
+  margin-left: 35px;
+}
+
+.footer__social img {
+  width: 24px;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-family: "OpenSans";
+  font-size: 13px;
+  line-height: 18px;
+  color: #ffffff;
 }
