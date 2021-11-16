@@ -211,6 +211,7 @@ input {
   font-weight: 600;
   line-height: 1;
   color: #ffffff;
+  border: 1px solid transparent;
 }
 
 .button--nav {
@@ -798,7 +799,7 @@ input {
 }
 
 .reviews__sliders {
-  margin-bottom: 90px;
+  margin-bottom: 70px;
 }
 
 .reviews__slide {
@@ -813,7 +814,7 @@ input {
       -ms-flex-pack: center;
           justify-content: center;
   width: 928px;
-  margin: 20px auto;
+  margin: 20px auto 75px;
   padding: 85px 0px;
   -webkit-box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
           box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
@@ -946,4 +947,102 @@ input {
 
 .reviews-button--right {
   right: 0;
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #988A75;
+}
+
+.order__container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.order__package {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #C4D0B1;
+  -webkit-box-shadow: 2px 2px 25px rgba(48, 48, 54, 0.15);
+          box-shadow: 2px 2px 25px rgba(48, 48, 54, 0.15);
+  border-radius: 25px;
+  padding: 100px 39px;
+  width: 545px;
+  min-height: 711px;
+}
+
+.order__head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.order__list li {
+  padding-left: 31px;
+  padding-right: 31px;
+}
+
+.order__item {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.order__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.order__buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.order__price {
+  margin-bottom: 45px;
+  font-family: "OpenSans";
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.order__button {
+  padding: 16px 95px;
+  background-color: #ffffff;
+  font-size: 16px;
+  line-height: 16px;
+  color: #303036;
 }

@@ -24,6 +24,11 @@ var reviewsSlider = new Swiper(".reviews__sliders", {
     prevEl: ".reviews-button--left",
     clickable: true,
   },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true,
+  },
   // отключение прокрутки при наведении мыши
   // on: {
   //   init() {

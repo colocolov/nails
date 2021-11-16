@@ -6,12 +6,12 @@
     text-align: center
     margin-bottom: 30px
   &__sliders
-    margin-bottom: 90px
+    margin-bottom: 70px
   &__slide
     position: relative
     @include fl-c
     width: 928px
-    margin: 20px auto
+    margin: 20px auto 75px
     padding: 85px 0px
     box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15)
     border-radius: 25px
@@ -102,3 +102,11 @@
       left: 0
     &--right
       right: 0
+
+// .swiper-pagination-bullets
+  // bottom: -10px !important
+.swiper-pagination-bullet
+  background: #fff
+  opacity: 1
+.swiper-pagination-bullet-active
+  background: $icon
