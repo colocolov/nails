@@ -391,7 +391,6 @@ input {
 }
 
 .intro__head {
-  text-transform: uppercase;
   margin-bottom: 22px;
 }
 
@@ -424,7 +423,6 @@ input {
 
 .author__head {
   margin-bottom: 5px;
-  text-transform: uppercase;
 }
 
 .author__subtitle {
@@ -517,7 +515,6 @@ input {
 }
 
 .course__head {
-  text-transform: uppercase;
   margin-bottom: 20px;
 }
 
@@ -602,6 +599,8 @@ input {
   margin: 0 16px 30px 16px;
   background-color: #ffffff;
   border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
+          box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
 }
 
 .course__unit::after {
@@ -684,6 +683,9 @@ input {
 
 .accordeon {
   overflow: hidden;
+  -webkit-transition: all 0.25s ease-out;
+  -o-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
 }
 
 .accordeon__name {
@@ -719,9 +721,8 @@ input {
 }
 
 .active .accordeon__content {
-  margin-top: 15px;
   opacity: 1;
-  padding: 0 5px;
+  padding: 15px 5px 0px;
   max-height: -webkit-max-content;
   max-height: -moz-max-content;
   max-height: max-content;
@@ -793,14 +794,14 @@ input {
 
 .reviews__head {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .reviews__sliders {
   margin-bottom: 90px;
 }
 
-.reviews__slider {
+.reviews__slide {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -808,16 +809,12 @@ input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 928px;
-  height: 382px;
-  margin: 0 auto;
-  padding: 85px 90px;
+  margin: 20px auto;
+  padding: 85px 0px;
   -webkit-box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
           box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
   border-radius: 25px;
@@ -825,7 +822,7 @@ input {
   overflow: hidden;
 }
 
-.reviews__slider::after {
+.reviews__slide::after {
   content: "";
   position: absolute;
   top: 0;
@@ -851,6 +848,7 @@ input {
 
 .reviews__message {
   z-index: 4;
+  width: 448px;
 }
 
 .reviews__text {
@@ -897,8 +895,8 @@ input {
   height: 732px;
   border-radius: 25px;
   overflow: hidden;
-  -webkit-box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
-          box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
+  -webkit-filter: drop-shadow(2px 2px 25px rgba(48, 48, 54, 0.15));
+          filter: drop-shadow(2px 2px 25px rgba(48, 48, 54, 0.15));
 }
 
 .reviews__photo--small {
@@ -906,6 +904,46 @@ input {
   height: 351px;
   border-radius: 25px;
   overflow: hidden;
-  -webkit-box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
-          box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
+  -webkit-filter: drop-shadow(2px 2px 25px rgba(48, 48, 54, 0.15));
+          filter: drop-shadow(2px 2px 25px rgba(48, 48, 54, 0.15));
+}
+
+.reviews-button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border: 2px solid #988A75;
+  fill: #988A75;
+  width: 56px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  z-index: 50;
+}
+
+.reviews-button:hover {
+  border: 2px solid #988A75;
+  background-color: #988A75;
+  fill: #ffffff;
+}
+
+.reviews-button--left {
+  left: 0;
+}
+
+.reviews-button--right {
+  right: 0;
 }

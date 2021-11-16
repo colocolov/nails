@@ -1,5 +1,6 @@
 .accordeon
   overflow: hidden
+  transition: all 0.25s ease-out
   &__name
     position: relative
     cursor: pointer
@@ -24,8 +25,8 @@
     transition: all 0.5s ease-out
 .active .accordeon
   &__content
-    margin-top: 15px
+    // margin-top: 15px
     opacity: 1
-    padding: 0 5px
+    padding: 15px 5px 0px
     max-height: max-content
     transition: all 0.5s ease-out

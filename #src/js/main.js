@@ -1,11 +1,4 @@
-// $(document).ready(function () {
-//   // accordeon
-//   $(".course__name").click(function (event) {
-//     $(this).toggleClass("active").next().slideToggle(300);
-//   });
-//   // --- end accordeon
-// });
-
+// accordeon
 document.addEventListener("DOMContentLoaded", () => {
   const accordeons = document.querySelectorAll(".accordeon");
 
@@ -16,11 +9,32 @@ document.addEventListener("DOMContentLoaded", () => {
       const content = self.querySelector(".course__decription");
 
       self.classList.toggle("active");
-
-      // if (self.classList.contains("active")) {
-      //   content.style.maxHeight = content.scrollHeight + "px";
-      // } else {
-      // }
     });
   });
 });
+
+//
+var reviewsSlider = new Swiper(".reviews__sliders", {
+  loop: true,
+  // autoplay: {
+  //   //delay: 7000,
+  // },
+  navigation: {
+    nextEl: ".reviews-button--right",
+    prevEl: ".reviews-button--left",
+    clickable: true,
+  },
+  // отключение прокрутки при наведении мыши
+  // on: {
+  //   init() {
+  //     this.el.addEventListener("mouseenter", () => {
+  //       this.autoplay.stop();
+  //     });
+
+  //     this.el.addEventListener("mouseleave", () => {
+  //       this.autoplay.start();
+  //     });
+  //   },
+  // },
+});
+//-----
