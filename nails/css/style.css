@@ -245,6 +245,7 @@ input {
 }
 
 .button--nav {
+  margin-right: 35px;
   font-size: 14px;
 }
 
@@ -271,7 +272,7 @@ input {
   position: absolute;
   content: "";
   top: 50%;
-  left: -430px;
+  right: 91px;
   width: 407px;
   height: 1px;
   background: -webkit-gradient(linear, left top, right top, from(rgba(152, 138, 117, 0)), to(#988a75));
@@ -355,7 +356,8 @@ input {
           align-items: flex-start;
   margin-top: 120px;
   margin-bottom: 160px;
-  padding-left: calc(49% - 16px);
+  margin-left: auto;
+  width: 545px;
 }
 
 .header__title {
@@ -391,6 +393,10 @@ input {
   font-family: "Raleway";
   line-height: 24px;
   margin-bottom: 40px;
+}
+
+.nav__icon {
+  display: none;
 }
 
 .nav__list {
@@ -710,6 +716,8 @@ input {
   margin-bottom: 28px;
   background-color: #ffffff;
   border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
+          box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
 }
 
 .course__step:not(:last-child):before {
@@ -1025,6 +1033,9 @@ input {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
 }
 
 .order__package {
@@ -1046,7 +1057,7 @@ input {
           box-shadow: 2px 2px 25px rgba(48, 48, 54, 0.15);
   border-radius: 25px;
   padding: 100px 39px;
-  width: 545px;
+  width: 48%;
   min-height: 711px;
   -webkit-transition: ease-in 0.3s;
   -o-transition: ease-in 0.3s;
@@ -1073,6 +1084,10 @@ input {
 
 .order__item:not(:last-child) {
   margin-bottom: 24px;
+}
+
+.order__descr {
+  margin-bottom: 45px;
 }
 
 .order__buy {
@@ -1209,9 +1224,9 @@ input {
 
 @media (min-width: 992px) {
   .button:hover {
-    -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.08);
+        -ms-transform: scale(1.08);
+            transform: scale(1.08);
     -webkit-box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
             box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
   }
@@ -1259,5 +1274,101 @@ input {
 
   .footer__social:hover {
     background: #3d362c;
+  }
+}
+
+@media (max-width: 1100px) {
+  .course__lessons {
+    padding-left: 0 !important;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .course__unit {
+    width: 46%;
+  }
+
+  .course__step:not(:last-child):before {
+    left: 87%;
+    width: 30%;
+  }
+}
+
+@media (max-width: 992px) {
+  .label::before,
+  .label::after {
+    width: 300px;
+  }
+
+  .nav {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-top: 20px;
+  }
+
+  .nav__list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .header {
+    padding-bottom: 0;
+  }
+
+  .header__navigation {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .header__content {
+    margin-bottom: 120px;
+  }
+
+  .course__unit {
+    width: 45%;
+  }
+
+  .course__promo {
+    max-width: 85%;
+    padding: 40px 40px 40px 100px;
+  }
+
+  .course__step:not(:last-child):before {
+    left: 91%;
+    width: 20%;
+  }
+
+  .intro__right {
+    margin-left: 30%;
+  }
+
+  .author__bio {
+    padding-right: 10px;
+    width: 55%;
+  }
+
+  .author__image {
+    width: 45%;
+  }
+
+  .reviews__photos {
+    gap: 20px;
+  }
+
+  .reviews__slide {
+    width: 95%;
+    padding: 55px 0;
+  }
+
+  .reviews__message {
+    width: 55%;
+  }
+
+  .order__package {
+    padding: 80px 25px;
   }
 }

@@ -3,6 +3,7 @@
     padding-top: 100px
     padding-bottom: 100px
     @include fl-all
+    align-items: inherit
   &__package
     @include fl-all
     flex-direction: column
@@ -10,7 +11,7 @@
     box-shadow: 2px 2px 25px rgba(48, 48, 54, 0.15)
     border-radius: 25px
     padding: 100px 39px
-    width: 545px
+    width: 48%
     min-height: 711px
     transition: ease-in 0.3s
   &__head
@@ -25,6 +26,8 @@
     line-height: 24px
     &:not(:last-child)
       margin-bottom: 24px
+  &__descr
+    margin-bottom: 45px
   &__buy
     display: flex
     flex-direction: column
