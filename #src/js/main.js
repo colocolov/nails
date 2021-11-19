@@ -16,9 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 //
 var reviewsSlider = new Swiper(".reviews__sliders", {
   loop: true,
-  // autoplay: {
-  //   //delay: 7000,
-  // },
   navigation: {
     nextEl: ".reviews-button--right",
     prevEl: ".reviews-button--left",
@@ -29,17 +26,5 @@ var reviewsSlider = new Swiper(".reviews__sliders", {
     type: "bullets",
     clickable: true,
   },
-  // отключение прокрутки при наведении мыши
-  // on: {
-  //   init() {
-  //     this.el.addEventListener("mouseenter", () => {
-  //       this.autoplay.stop();
-  //     });
-
-  //     this.el.addEventListener("mouseleave", () => {
-  //       this.autoplay.start();
-  //     });
-  //   },
-  // },
 });
 //-----

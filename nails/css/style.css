@@ -194,7 +194,7 @@ input {
      object-fit: cover;
 }
 
-.logo--header {
+.logo {
   height: 50px;
 }
 
@@ -203,6 +203,8 @@ input {
 }
 
 .button {
+  position: relative;
+  overflow: hidden;
   padding: 10px 22px;
   background-color: #988A75;
   border-radius: 10px;
@@ -212,15 +214,38 @@ input {
   line-height: 1;
   color: #ffffff;
   border: 1px solid transparent;
-}
-
-.button--nav {
-  font-size: 14px;
+  -webkit-transition: linear 0.3s;
+  -o-transition: linear 0.3s;
+  transition: linear 0.3s;
 }
 
 .button--header {
   padding: 16px 64px;
   font-size: 16px;
+}
+
+.button--header::after {
+  content: "";
+  position: absolute;
+  height: 350%;
+  width: 200%;
+  top: 0;
+  left: -100%;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 100%;
+  z-index: 10;
+  -webkit-animation-name: ripple;
+          animation-name: ripple;
+  -webkit-animation-duration: 6s;
+          animation-duration: 6s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.button--nav {
+  font-size: 14px;
 }
 
 .label {
@@ -266,6 +291,11 @@ input {
   background: linear-gradient(90deg, #988a75 0%, rgba(197, 207, 196, 0) 100%);
 }
 
+.label-icon {
+  width: 44px;
+  height: 44px;
+}
+
 .header {
   position: relative;
   padding-top: 26px;
@@ -286,7 +316,7 @@ input {
   z-index: -1;
 }
 
-.header--bg {
+.header-bg {
   background: url(../images/bg-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -313,9 +343,19 @@ input {
 }
 
 .header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-top: 120px;
   margin-bottom: 160px;
-  padding-left: 550px;
+  padding-left: calc(49% - 16px);
 }
 
 .header__title {
@@ -377,10 +417,6 @@ input {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-}
-
-.nav__link:hover::after {
-  width: 85%;
 }
 
 .intro {
@@ -450,7 +486,18 @@ input {
 }
 
 .course__promo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   position: relative;
+  z-index: 2;
   max-width: 928px;
   margin: 0 auto;
   margin-bottom: 50px;
@@ -469,6 +516,7 @@ input {
   top: 0;
   bottom: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background: -webkit-gradient(linear, left top, right top, from(rgba(2, 0, 36, 0)), color-stop(55%, #c5cfc4), to(#c5cfc4));
@@ -504,11 +552,6 @@ input {
   text-transform: uppercase;
 }
 
-.course__label--icon {
-  width: 44px;
-  height: 44px;
-}
-
 .course__composition {
   margin: 0 auto;
   text-align: center;
@@ -519,7 +562,7 @@ input {
   margin-bottom: 20px;
 }
 
-.course__head--step {
+.course__head-step {
   text-align: center;
   margin-bottom: 50px;
 }
@@ -567,14 +610,14 @@ input {
   margin-right: 20px;
 }
 
-.course__date--info {
+.course__date-info {
   display: block;
   color: #999696;
 }
 
-.course__date--step {
-  font-size: 22px;
-  line-height: 32px;
+.course__date-step {
+  font-size: 18px;
+  line-height: 26px;
 }
 
 .course__lessons {
@@ -602,6 +645,9 @@ input {
   border-radius: 20px;
   -webkit-box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
           box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
+  -webkit-transition: linear 0.8s;
+  -o-transition: linear 0.8s;
+  transition: linear 0.8s;
 }
 
 .course__unit::after {
@@ -757,8 +803,8 @@ input {
 .sertificat__item {
   position: relative;
   padding-left: 67px;
-  font-size: 22px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 26px;
   letter-spacing: 0.02em;
   color: #999696;
 }
@@ -874,39 +920,45 @@ input {
 .reviews__photos {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (351px)[3];
-  grid-template-columns: repeat(3, 351px);
-  -ms-grid-rows: (351px)[2];
-  grid-template-rows: repeat(2, 351px);
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-grid-columns: (31%)[3];
+  grid-template-columns: repeat(3, 31%);
+  -ms-grid-rows: (48%)[2];
+  grid-template-rows: repeat(2, 48%);
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   gap: 30px;
 }
 
-.reviews__photo--big {
+.reviews__photo-big {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1/3;
-  width: 352px;
-  height: 732px;
+  width: 100%;
+  height: 100%;
   border-radius: 25px;
   overflow: hidden;
   -webkit-filter: drop-shadow(2px 2px 25px rgba(48, 48, 54, 0.15));
           filter: drop-shadow(2px 2px 25px rgba(48, 48, 54, 0.15));
+  -webkit-transition: ease-out 0.3s;
+  -o-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 
-.reviews__photo--small {
-  width: 351px;
-  height: 351px;
+.reviews__photo-small {
+  width: 100%;
+  height: 100%;
   border-radius: 25px;
   overflow: hidden;
   -webkit-filter: drop-shadow(2px 2px 25px rgba(48, 48, 54, 0.15));
           filter: drop-shadow(2px 2px 25px rgba(48, 48, 54, 0.15));
+  -webkit-transition: ease-out 0.3s;
+  -o-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 
 .reviews-button {
@@ -933,6 +985,9 @@ input {
   cursor: pointer;
   outline: none;
   z-index: 50;
+  -webkit-transition: linear 0.3s;
+  -o-transition: linear 0.3s;
+  transition: linear 0.3s;
 }
 
 .reviews-button:hover {
@@ -993,11 +1048,17 @@ input {
   padding: 100px 39px;
   width: 545px;
   min-height: 711px;
+  -webkit-transition: ease-in 0.3s;
+  -o-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
 }
 
 .order__head {
   text-align: center;
   margin-bottom: 40px;
+  -webkit-transition: ease-in 0.3s;
+  -o-transition: ease-in 0.3s;
+  transition: ease-in 0.3s;
 }
 
 .order__list li {
@@ -1097,6 +1158,9 @@ input {
   width: 38px;
   background: #988A75;
   border-radius: 10px;
+  -webkit-transition: ease-in 0.2s;
+  -o-transition: ease-in 0.2s;
+  transition: ease-in 0.2s;
 }
 
 .footer__social:not(:first-child) {
@@ -1113,4 +1177,87 @@ input {
   font-size: 13px;
   line-height: 18px;
   color: #ffffff;
+}
+
+@-webkit-keyframes ripple {
+  20% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+}
+
+@keyframes ripple {
+  20% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+  }
+}
+
+@media (min-width: 992px) {
+  .button:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
+            box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
+  }
+
+  .button--nav:hover {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .nav__link:hover::after {
+    width: 85%;
+  }
+
+  .course__unit:hover {
+    -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+
+  .reviews__photo-small:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+
+  .reviews__photo-big:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+
+  .order__package:hover {
+    background: #988A75;
+    color: #ffffff;
+  }
+
+  .order__package:hover h2 {
+    color: #ffffff;
+  }
+
+  .footer__email:hover {
+    text-decoration: underline;
+  }
+
+  .footer__social:hover {
+    background: #3d362c;
+  }
 }

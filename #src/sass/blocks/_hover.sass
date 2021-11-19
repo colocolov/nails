@@ -1,0 +1,40 @@
+@media ( min-width: 992px )
+  .button
+    &:hover
+      transform: scale(1.1)
+      box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15)
+    &--nav
+      &:hover
+        transform: none
+
+  .nav__link
+    &:hover
+      &::after
+        width: 85%
+
+  .course__unit
+    &:hover
+      transform: scale(1.02)
+
+  .reviews__photo-small
+    &:hover
+      transform: scale(1.05)
+  .reviews__photo-big
+    &:hover
+      transform: scale(1.05)
+
+  .order__package
+    &:hover
+      background: $icon
+      color: $bgc
+      h2
+        color: $bgc
+
+  .footer
+    &__email
+      &:hover
+        text-decoration: underline
+    &__social
+      &:hover
+        background: #3d362c
+        // background: $icon

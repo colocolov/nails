@@ -1,8 +1,6 @@
 html
   scroll-behavior: smooth
 body
-  // overflow: hidden
-  // заменить ниже на свои значения
   @extend %body
   color: $text
 
@@ -46,7 +44,7 @@ input
   height: 100%
   object-fit: cover
 
-.logo--header
+.logo
   height: 50px
 
 .heading
@@ -54,6 +52,8 @@ input
   text-transform: uppercase
 
 .button
+  position: relative
+  overflow: hidden
   padding: 10px 22px
   background-color: $icon
   border-radius: 10px
@@ -63,11 +63,26 @@ input
   line-height: 1
   color: $bgc
   border: 1px solid transparent
-  &--nav
-    font-size: 14px
+  transition: linear 0.3s
   &--header
     padding: 16px 64px
     font-size: 16px
+    &::after
+      content: ''
+      position: absolute
+      height: 350%
+      width: 200%
+      top: 0
+      left: -100%
+      background: rgba(255, 255, 255, 0.8)
+      border-radius: 100%
+      z-index: 10
+      animation-name: ripple
+      animation-duration: 6s
+      animation-timing-function: linear
+      animation-iteration-count: infinite
+  &--nav
+    font-size: 14px
 
 .label
   position: relative
@@ -96,3 +111,6 @@ input
     width: 407px
     height: 1px
     background: linear-gradient(90deg, rgba(152,138,117,1) 0%, rgba(197,207,196,0) 100%)
+  &-icon
+    width: 44px
+    height: 44px
