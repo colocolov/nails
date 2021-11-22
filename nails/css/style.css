@@ -1404,6 +1404,11 @@ input {
     overflow-y: hidden;
   }
 
+  .heading {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
   .nav {
     position: relative;
     -webkit-box-ordinal-group: 4;
@@ -1482,7 +1487,7 @@ input {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 90%;
+    width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 150px 30px 30px 100px;
@@ -1580,7 +1585,7 @@ input {
   }
 
   .course__unit {
-    width: 44%;
+    width: 100%;
   }
 
   .course__composition {
@@ -1617,8 +1622,126 @@ input {
     margin: 0 auto;
   }
 
+  .reviews__slide {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .reviews__avatar {
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .reviews__message {
+    width: 80%;
+  }
+
+  .reviews-button {
+    top: 29%;
+  }
+
+  .reviews__photos {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: (48%)[2];
+    grid-template-columns: repeat(2, 48%);
+    -ms-grid-rows: (32%)[3];
+    grid-template-rows: repeat(3, 32%);
+    gap: 16px;
+  }
+
+  .order__package {
+    padding: 50px 25px;
+  }
+
+  .order__item {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .order__list li {
+    padding-left: 17px;
+    padding-right: 0;
+  }
+
+  .order__button {
+    padding: 16px 75px;
+  }
+
+  .footer__social:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  .footer__date {
+    margin-bottom: 15px;
+  }
+
   .label::after,
   .label::before {
     width: 215px;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .header__content {
+    width: 95%;
+  }
+
+  .header__title {
+    font-size: 28px;
+  }
+
+  .header__title::after {
+    font-size: 32px;
+    line-height: 32px;
+    top: 10px;
+  }
+
+  .intro__right {
+    margin-left: 10%;
+  }
+
+  .author__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .author__bio {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .author__image {
+    margin: 0 auto;
+  }
+
+  .course__step {
+    width: 48%;
+  }
+
+  .reviews__slider {
+    -webkit-box-shadow: 2px 2px 14px rgba(48, 48, 54, 0.15);
+            box-shadow: 2px 2px 14px rgba(48, 48, 54, 0.15);
+  }
+
+  .order__list li {
+    padding-left: 0;
+  }
+
+  .order__button {
+    padding: 16px 55px;
+  }
+
+  .label::after,
+  .label::before {
+    width: 155px;
   }
 }
