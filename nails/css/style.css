@@ -991,7 +991,7 @@ input {
 
 .reviews-button {
   position: absolute;
-  top: 50%;
+  top: 45%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -1363,6 +1363,11 @@ input {
     padding: 40px 40px 40px 100px;
   }
 
+  .course__content {
+    margin-top: 15px;
+    padding: 0 31px 0 160px;
+  }
+
   .course__step:not(:last-child):before {
     left: 91%;
     width: 20%;
@@ -1580,6 +1585,11 @@ input {
             justify-content: flex-start;
   }
 
+  .course__icon {
+    width: 100%;
+    margin-left: 16px;
+  }
+
   .course__icon:not(:last-child) {
     margin-bottom: 15px;
   }
@@ -1595,6 +1605,8 @@ input {
   .course__steps {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 
   .course__step {
@@ -1654,6 +1666,7 @@ input {
   }
 
   .order__package {
+    min-height: 580px;
     padding: 50px 25px;
   }
 
@@ -1697,11 +1710,12 @@ input {
 
   .header__title {
     font-size: 28px;
+    line-height: 32px;
   }
 
   .header__title::after {
     font-size: 32px;
-    line-height: 32px;
+    line-height: 36px;
     top: 10px;
   }
 
@@ -1721,6 +1735,7 @@ input {
 
   .author__image {
     margin: 0 auto;
+    width: 55%;
   }
 
   .course__step {
@@ -1743,5 +1758,96 @@ input {
   .label::after,
   .label::before {
     width: 155px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__contact {
+    display: none;
+  }
+
+  .header__contact._active {
+    display: block;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .header__title::after {
+    top: 0px;
+  }
+
+  .nav__menu {
+    padding: 170px 30px 30px 40px;
+  }
+
+  .intro {
+    padding-top: 80px;
+  }
+
+  .author__image {
+    width: 65%;
+  }
+
+  .course__promo {
+    padding: 20px;
+  }
+
+  .course__title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .course__button {
+    padding: 16px 36px;
+  }
+
+  .reviews-button {
+    top: 24%;
+    border: none;
+  }
+
+  .reviews-button--right {
+    right: -13px;
+  }
+
+  .reviews-button--left {
+    left: -13px;
+  }
+
+  .reviews__avatar {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 175px;
+            flex: 0 0 175px;
+    width: 175px;
+    height: 175px;
+  }
+
+  .order__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .order__package {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .order__package:first-child {
+    margin-bottom: 25px;
+  }
+
+  .footer__date {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .footer__email {
+    margin-bottom: 20px;
+  }
+
+  .label::after,
+  .label::before {
+    width: 115px;
   }
 }

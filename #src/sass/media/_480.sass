@@ -1,0 +1,66 @@
+@media ( max-width:480px )
+
+  .header
+    &__contact
+      display: none
+      &._active
+        display: block
+        order: 3
+        // margin-top: 40px
+        // padding-left: 21px
+    &__title::after
+      top: 0px
+
+  .nav
+    &__menu
+      padding: 170px 30px 30px 40px
+    &__icon
+      // top: 20px
+
+  .intro
+    padding-top: 80px
+
+  .author__image
+    width: 65%
+
+  .course
+    &__promo
+      padding: 20px
+    &__title
+      font-size: 26px
+      line-height: 34px
+    &__button
+      padding: 16px 36px
+
+  .reviews
+    &-button
+      top: 24%
+      border: none
+      &--right
+        right: -13px
+      &--left
+        left: -13px
+    &__avatar
+      flex: 0 0 175px
+      width: 175px
+      height: 175px
+
+  .order
+    &__container
+      flex-wrap: wrap
+    &__package
+      width: 100%
+      min-height: auto
+      &:first-child
+        margin-bottom: 25px
+
+  .footer
+    &__date
+      flex-wrap: wrap
+    &__email
+      margin-bottom: 20px
+
+  .label
+    &::after,
+    &::before
+      width: 115px
