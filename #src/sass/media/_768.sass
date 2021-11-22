@@ -2,20 +2,21 @@
 
   body._lock
     overflow-y: hidden
+
   .nav
-    // position: fixed
+    position: relative
     // top: 0
     // left: 0
     // right: 0
     // width: 100%
-    z-index: 10
     // height: 80px
     // background-color: $green_dark
     order: 3
     flex-basis: auto
     margin-top: 0
+    z-index: 9
     &__icon
-      z-index: 5
+      z-index: 10
       display: block
       position: relative
       width: 25px
@@ -57,7 +58,8 @@
       padding: 150px 30px 30px 100px
       transition: right 0.3s ease 0s
       margin-top: 0
-      overflow: auto
+      overflow: hidden /// auto
+      // z-index: 15 //!!!
       &::before
         content: ""
         position: fixed
@@ -67,7 +69,7 @@
         width: 100%
         height: 73px
         // background-color: $green_light
-        z-index: 3
+        z-index: 8
     &__menu._active
       right: 0
     &__menu .nav__list
@@ -90,13 +92,57 @@
       left: 0
       right: 0
       width: 100%
-      z-index: 10
+      z-index: 8
       height: 80px
       background-color: $green_light
       padding-left: 20px
       padding-right: 20px
       // order: 3
+    &__content
+      margin-bottom: 100px
     &__contact
       z-index: 30
       &._active .header__phone
         color: $bgc
+
+  .intro__right
+    margin-left: 20%
+
+  .course
+    &__promo
+      padding: 40px
+    &__content
+      margin-top: 0
+      padding: 0
+    &__data
+      flex-wrap: wrap
+      justify-content: flex-start
+    &__icon
+      &:not(:last-child)
+        margin-bottom: 15px
+    &__unit
+      width: 44%
+    &__composition
+      margin-bottom: 100px
+    &__steps
+      flex-wrap: wrap
+    &__step
+      margin-bottom: 25px
+      &:not(:last-child)
+        &::before
+          content: none
+      & img
+        margin-bottom: 10px
+
+  .sertificat
+    &__container
+      flex-wrap: wrap
+    &__info
+      margin-bottom: 30px
+    &__image
+      margin: 0 auto
+
+  .label
+    &::after,
+    &::before
+      width: 215px

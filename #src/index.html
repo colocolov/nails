@@ -62,14 +62,17 @@
         <section class="course">
           <div class="container">
             <div class="course__promo">
-              <h2 class="course__title">Онлайн курс "Акварельный дизайн"</h2>
-              <p class="text course__text">
-                Базовый обучающий курс для Nail-мастеров. Ты освоишь три основные техники акварельной росписи.
-              </p>
-              <a href="#order" class="button course__button">Заказать курс</a>
+              <img class="course__image" src="images/works/work_01.jpg" alt="фон" />
+              <div class="course__content">
+                <h2 class="course__title">Онлайн курс "Акварельный дизайн"</h2>
+                <p class="text course__text">
+                  Базовый обучающий курс для Nail-мастеров. Ты освоишь три основные техники акварельной росписи.
+                </p>
+                <a href="#order" class="button course__button">Заказать курс</a>
+              </div>
             </div>
             <!-- /.course__promo -->
-            <div class="label course__label">
+            <div class="label course__label" id="course">
               <img src="images/icons/sprite.svg#lilia" alt="icon" class="label-icon" />
             </div>
             <div class="course__composition">
@@ -134,7 +137,7 @@
           <div class="container">
             <h2 class="heading reviews__head">Отзывы учениц</h2>
             @include('html/_reviews.html')
-            <div class="label reviews__label" id="course">
+            <div class="label reviews__label">
               <img src="images/icons/sprite.svg#lilia" alt="icon" class="label-icon" />
             </div>
             <h2 class="heading reviews__head">Работы учениц</h2>

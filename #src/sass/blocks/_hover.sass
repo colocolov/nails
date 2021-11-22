@@ -1,7 +1,8 @@
 @media ( min-width: 992px )
   .button
     &:hover
-      transform: scale(1.08)
+      // transform: scale(1.02)
+      background-color: darken($icon, 5%)
       box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15)
     &--nav
       &:hover
@@ -12,9 +13,13 @@
       &::after
         width: 85%
 
-  .course__unit
-    &:hover
-      transform: scale(1.02)
+  .course
+    &__unit
+      &:hover
+        transform: scale(1.02)
+    &__button
+      &:hover
+        background-color: darken($bgc, 3%)
 
   .reviews__photo-small
     &:hover
@@ -23,12 +28,16 @@
     &:hover
       transform: scale(1.05)
 
-  .order__package
-    &:hover
-      background: $icon
-      color: $bgc
-      h2
+  .order
+    &__package
+      &:hover
+        background: $icon
         color: $bgc
+        h2
+          color: $bgc
+    &__button
+      &:hover
+        background-color: darken($bgc, 3%)
 
   .footer
     &__email
