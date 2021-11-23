@@ -44,6 +44,7 @@ let { src, dest, task } = require("gulp"),
   svgsprite = require("gulp-svg-sprite"),
   webp = require("gulp-webp"),
   webphtml = require("gulp-webp-html"),
+  htmlmin = require("gulp-htmlmin"),
   //ttf2woff = require("gulp-ttf2woff"),
   ttf2woff2 = require("gulp-ttf2woff2"),
   fonter = require("gulp-fonter"),
@@ -69,6 +70,12 @@ function html() {
       })
     )
     .pipe(webphtml())
+    .pipe(
+      htmlmin({
+        collapseWhitespace: true, // удаляем все переносы
+        removeComments: true, // удаляем все комментарии
+      })
+    )
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }
@@ -79,14 +86,6 @@ function css() {
     .pipe(
       scss({
         outputStyle: "expanded",
-      })
-    )
-    .pipe(mediagroup())
-    .pipe(
-      autoprefixer({
-        overrideBrowserslist: ["last 10 versions"],
-        grid: true,
-        cascade: true,
       })
     )
     .pipe(dest(path.build.css))
@@ -129,7 +128,7 @@ function cssBuild() {
 
 // копирование доп. стилей из src в готовый проект
 function cssAdd() {
-  return src(path.src.cssadd).pipe(dest(path.build.css));
+  return src(path.src.cssadd).pipe(dest(path.build.css)).pipe(browsersync.stream());
 }
 
 function js() {
