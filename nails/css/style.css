@@ -306,7 +306,14 @@ input {
   background-color: #EEF2E9;
 }
 
-.header::after {
+.header-bg {
+  background: url(../images/bg-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top 30%;
+}
+
+.header-bg::before {
   content: "";
   position: absolute;
   background-color: rgba(0, 0, 0, 0.1);
@@ -315,14 +322,6 @@ input {
   top: 0;
   left: 0;
   right: 0;
-  z-index: -1;
-}
-
-.header-bg {
-  background: url(../images/bg-header.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center top 30%;
   z-index: 1;
 }
 
@@ -893,7 +892,7 @@ input {
   -webkit-box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
           box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
   border-radius: 25px;
-  z-index: 1;
+  z-index: -1;
   overflow: hidden;
 }
 

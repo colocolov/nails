@@ -4,25 +4,22 @@
   padding-bottom: 26px
   font-family: "OpenSans"
   background-color: $green_light
-  &::after
-    // это накладка для фона
-    content: ''
-    position: absolute
-    background-color: rgba(0, 0, 0, 0.1)
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-    right: 0
-    z-index: -1
   &-bg
     background: url(../images/bg-header.jpg)
     background-repeat: no-repeat
     background-size: cover
+    // z-index: 1
     background-position: center top 30%
-    z-index: 1
-    // filter: blur(5px)
-    // width: 100%
+    &::before
+      content: ''
+      position: absolute
+      background-color: rgba(0, 0, 0, 0.1)
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      right: 0
+      z-index: 1
   &__navigation
     @include fl-all
     // background-color: rgba(238,242,233, 0.8)
