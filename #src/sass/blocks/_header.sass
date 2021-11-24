@@ -1,10 +1,10 @@
 .header
-  position: relative
   padding-top: 26px
   padding-bottom: 26px
   font-family: "OpenSans"
   background-color: $green_light
   &-bg
+    position: relative
     background: url(../images/bg-header.jpg)
     background-repeat: no-repeat
     background-size: cover
@@ -22,6 +22,8 @@
       z-index: 1
   &__navigation
     @include fl-all
+    position: relative
+    z-index: 2
     // background-color: rgba(238,242,233, 0.8)
   &__phone
     font-size: 14px

@@ -255,13 +255,13 @@ input {
 }
 
 .header {
-  position: relative;
   padding-top: 26px;
   padding-bottom: 26px;
   font-family: "OpenSans";
   background-color: #EEF2E9;
 }
 .header-bg {
+  position: relative;
   background: url(../images/bg-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -282,6 +282,8 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
 }
 .header__phone {
   font-size: 14px;
@@ -703,7 +705,7 @@ input {
   bottom: 0;
   right: 0;
   left: 0;
-  background: url(../images/works/03.jpg) no-repeat center/cover;
+  background: url(../images/bg/bg-reviews.jpg) no-repeat center/cover;
   opacity: 0.2;
 }
 .reviews__avatar {
@@ -752,7 +754,9 @@ input {
   border-radius: 25px;
   overflow: hidden;
   filter: drop-shadow(2px 2px 25px rgba(48, 48, 54, 0.15));
-  transition: ease-out 0.3s;
+}
+.reviews__photo-big img {
+  transition: ease-out 0.7s;
 }
 .reviews__photo-small {
   width: 100%;
@@ -760,7 +764,9 @@ input {
   border-radius: 25px;
   overflow: hidden;
   filter: drop-shadow(2px 2px 25px rgba(48, 48, 54, 0.15));
-  transition: ease-out 0.3s;
+}
+.reviews__photo-small img {
+  transition: ease-out 0.7s;
 }
 .reviews-button {
   position: absolute;
@@ -929,12 +935,12 @@ input {
     background-color: #f7f7f7;
   }
 
-  .reviews__photo-small:hover {
-    transform: scale(1.05);
+  .reviews__photo-small img:hover {
+    transform: scale(1.1);
   }
 
-  .reviews__photo-big:hover {
-    transform: scale(1.05);
+  .reviews__photo-big img:hover {
+    transform: scale(1.1);
   }
 
   .order__package:hover {
