@@ -103,6 +103,7 @@
       padding-right: 20px
       // order: 3
     &__content
+      margin-top: 100px
       margin-bottom: 100px
     &__contact
       z-index: 30
@@ -110,11 +111,12 @@
         color: $bgc
 
   .intro__right
-    margin-left: 20%
+    margin-left: 3%
 
   .course
     &__promo
       padding: 40px
+      height: auto
     &__content
       margin-top: 0
       padding: 0
@@ -122,19 +124,22 @@
       flex-wrap: wrap
       justify-content: flex-start
     &__icon
-      width: 100%
+      // width: 100%
       margin-left: 16px
       &:not(:last-child)
         margin-bottom: 15px
     &__unit
       width: 100%
+    &__name
+      font-size: 24px
+      line-height: 30px
     &__composition
-      margin-bottom: 100px
+      margin-bottom: 70px
     &__steps
       flex-wrap: wrap
       justify-content: space-around
     &__step
-      margin-bottom: 25px
+      margin-bottom: 30px
       &:not(:last-child)
         &::before
           content: none
@@ -146,14 +151,20 @@
       flex-wrap: wrap
     &__info
       margin-bottom: 30px
+      width: 100%
+    &__item::after
+      width: 30px
+      height: 30px
     &__image
       margin: 0 auto
 
   .reviews
     &__slide
       flex-direction: column
+      box-shadow: 2px 2px 14px rgb(48 48 54 / 15%)
     &__avatar
       margin-right: 0
+      margin-left: 0
       margin-bottom: 25px
     &__message
       width: 80%
@@ -180,6 +191,8 @@
       padding-right: 0
     &__button
       padding: 16px 75px
+    &__price
+      margin-bottom: 40px
 
   .footer
     &__social:not(:first-child)

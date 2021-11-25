@@ -1,4 +1,7 @@
 @media ( max-width:992px )
+  body
+    line-height: 26px
+
   .label::before,
   .label::after
     width: 300px
@@ -15,13 +18,44 @@
     &__navigation
       flex-wrap: wrap
     &__content
-      margin-bottom: 120px
+      margin-bottom: 60px
+      margin-left: 20px
+      margin-top: 35px
+    &__title
+      font-size: 48px
+      line-height: 68px
+      &::after
+        font-size: 58px
+        line-height: 68px
+
+  .intro
+    padding-top: 60px
+    padding-bottom: 30px
+    &__right
+      margin-left: 11%
+      margin-bottom: 35px
+    &__left
+      margin-left: 3%
+
+  .author
+    padding-top: 25px
+    padding-bottom: 60px
+    &__container
+      align-items: flex-start
+      padding: 0 40px
+    &__bio
+      padding-right: 20px
+      width: 55%
+    &__image
+      width: 39%
 
   .course
+    padding-top: 60px
+    padding-bottom: 60px
     &__unit
       width: 45%
     &__promo
-      max-width: 85%
+      max-width: 93%
       padding: 40px 40px 40px 100px
     &__content
       margin-top: 15px
@@ -31,26 +65,65 @@
         &:before
           left: 91%
           width: 20%
+    &__icon
+      &:not(:last-child)
+        margin-right: 40px
+    &__composition
+      margin-bottom: 60px
+    &__head-step
+      margin-bottom: 50px
 
-  .intro__right
-    margin-left: 30%
-
-  .author
-    &__bio
-      padding-right: 10px
-      width: 55%
-    &__image
-      width: 45%
+  .sertificat
+    &__container
+      padding-top: 60px
+      padding-bottom: 60px
+    &__info
+      width: 58%
+      margin-right: 20px
+    &__head
+      margin-bottom: 30px
+    &__list
+      margin-left: 6%
+    &__item:not(:last-child)
+      margin-bottom: 17px
 
   .reviews
+    padding-top: 70px
+    padding-bottom: 70px
     &__photos
       gap: 20px
     &__slide
       width: 95%
       padding: 55px 0
+      margin-bottom: 60px
+    &__avatar
+      margin-left: 45px
+      margin-right: 40px
+      width: 175px
+      height: 175px
+      flex: 0 0 175px
     &__message
       width: 55%
+    &__text
+      font-size: 16px
+    &__sliders
+      margin-bottom: 50px
+    &__label
+      margin-bottom: 50px
 
   .order
+    &__container
+      padding: 60px 30px
     &__package
-      padding: 80px 25px
+      min-height: 680px
+      padding: 65px 5px
+    &__price
+      margin-bottom: 20px
+
+  .footer
+    padding-top: 30px
+    padding-bottom: 20px
+    &__date
+      margin-bottom: 20px
+    &__social:not(:first-child)
+      margin-left: 20px

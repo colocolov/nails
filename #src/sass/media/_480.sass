@@ -1,63 +1,124 @@
 @media ( max-width:480px )
 
+  .logo
+    height: 40px
+
   .header
     &__contact
       display: none
       &._active
-        display: block
+        display: flex
         order: 3
         // margin-top: 40px
         // padding-left: 21px
     &__title::after
       top: 0px
+    &__navigation
+      height: 70px
+    &__content
+      margin-bottom: 52px
 
   .nav
     &__menu
       padding: 170px 30px 30px 40px
-    &__icon
-      // top: 20px
+    &__item .nav__link
+      font-size: 22px
 
   .intro
-    padding-top: 80px
+    padding-top: 40px
 
-  .author__image
-    width: 65%
+  .author
+    padding-top: 40px
+    padding-bottom: 40px
+    &__bio
+      padding-right: 0
+    &__subtitle
+      font-size: 14px
+      margin-bottom: 20px
+    &__image
+      width: 90%
 
   .course
+    padding-top: 40px
+    padding-bottom: 40px
     &__promo
-      padding: 20px
+      max-width: 100%
+      padding: 27px
+      margin-bottom: 40px
     &__title
-      font-size: 26px
-      line-height: 34px
+      font-size: 22px
+      line-height: 30px
+    &__text
+      font-size: 16px
+      line-height: 24px
+      margin-bottom: 30px
+    &__subtitle
+      font-size: 16px
+      margin-bottom: 15px
+    &__icon
+      margin-left: 0
+    &__unit
+      margin: 0 0 20px
     &__button
       padding: 16px 36px
+    &__composition
+      margin-bottom: 40px
+    &__step
+      margin-bottom: 20px
+    &__head-step
+      margin-bottom: 30px
+
+  .sertificat
+    &__container
+      padding-top: 40px
+      padding-bottom: 40px
+    &__head
+      text-align: center
+    &__item
+      padding-left: 55px
 
   .reviews
+    padding-top: 40px
+    padding-bottom: 52px
+    &__sliders
+      margin-bottom: 40px
+    &__head
+      margin-bottom: 20px
     &-button
       top: 24%
       border: none
+      width: 40px
+      height: 40px
       &--right
-        right: -13px
+        right: 0px
       &--left
-        left: -13px
+        left: 0px
+    &__slide
+      padding: 40px 0
+      box-shadow: 2px 2px 9px rgb(48 48 54 / 15%)
     &__avatar
-      flex: 0 0 175px
-      width: 175px
-      height: 175px
+      flex: 0 0 150px
+      width: 150px
+      height: 150px
+    &__message
+      width: 88%
+    &__author
+      font-size: 22px
 
   .order
     &__container
-      flex-wrap: wrap
+      padding: 40px 15px
+      justify-content: center
     &__package
-      width: 100%
-      min-height: auto
-      &:first-child
-        margin-bottom: 25px
+      width: 95%
 
   .footer
     &__date
       flex-wrap: wrap
+      margin-bottom: 30px
     &__email
+      display: block
+      width: 100%
       margin-bottom: 20px
 
   .label
