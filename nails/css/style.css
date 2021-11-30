@@ -175,6 +175,7 @@ input {
 
 .logo {
   height: 50px;
+  margin-right: 40px;
 }
 
 .heading {
@@ -289,6 +290,7 @@ input {
 .header__contact {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 .header__phone {
   font-size: 14px;
@@ -337,14 +339,18 @@ input {
   margin-bottom: 40px;
 }
 
+.nav {
+  margin-right: 40px;
+}
 .nav__icon {
   display: none;
 }
 .nav__list {
   list-style: none;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: start;
 }
 .nav__item:not(:last-child) {
   margin-right: 40px;
@@ -414,7 +420,7 @@ input {
   position: relative;
   border-radius: 25px;
   max-width: 928px;
-  height: 450px;
+  min-height: 450px;
   margin: 0 auto;
   margin-bottom: 50px;
   box-shadow: 2px 2px 20px rgba(48, 48, 54, 0.15);
@@ -447,6 +453,7 @@ input {
   z-index: 3;
   width: 100%;
   margin-top: 70px;
+  margin-bottom: 70px;
   padding: 0 31px 0 480px;
 }
 .course__title {
@@ -1012,10 +1019,6 @@ input {
     flex-basis: 100%;
     margin-top: 20px;
   }
-  .nav__list {
-    justify-content: space-around;
-  }
-
   .header {
     padding-bottom: 0;
   }
@@ -1073,10 +1076,12 @@ input {
   }
   .course__promo {
     max-width: 93%;
+    min-height: 370px;
     padding: 40px 40px 40px 100px;
   }
   .course__content {
     margin-top: 15px;
+    margin-bottom: 0px;
     padding: 0 31px 0 160px;
   }
   .course__step:not(:last-child):before {
@@ -1523,6 +1528,7 @@ input {
   }
   .course__promo {
     max-width: 100%;
+    min-height: 300px;
     padding: 27px;
     margin-bottom: 40px;
   }

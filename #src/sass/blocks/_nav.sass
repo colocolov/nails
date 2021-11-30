@@ -1,6 +1,8 @@
 .nav
   // position: relative
   // z-index: 150
+  // max-width: 650px
+  margin-right: 40px
   &__icon
     display: none
   &__menu
@@ -8,8 +10,10 @@
   &__list
     list-style: none
     display: flex
-    justify-content: space-between
+    // justify-content: space-between
     align-items: center
+    flex-wrap: wrap
+    justify-content: start
   &__item
     &:not(:last-child)
       margin-right: 40px
